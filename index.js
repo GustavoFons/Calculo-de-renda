@@ -10,8 +10,8 @@ app.post("/api/calculoRenda", async (req, res) => {
     const dados = req.body;
 
     const endereco = await axios.get(
-       ` https://viacep.com.br/ws/${dados.cep}/json/ `
-       );
+        ` https://viacep.com.br/ws/${dados.cep}/json/ `
+    );
 
     res.send({
         nome: dados.nome,
@@ -21,6 +21,6 @@ app.post("/api/calculoRenda", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${ PORT }`);
+    console.log(`Server is running on port ${PORT}`);
 });
 

@@ -15,9 +15,20 @@ async function onsubmit(event) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
-    }); 
+    });
     const json = await result.json();
     console.log(json);
+
+    document.querySelector("#nome_resultado").innerHTML = json.nome;
+    document.querySelector("#cep_resultado").innerHTML = `json.endereco.cep`;
+    document.querySelector("#logradouro_resultado").innerHTML =
+        json.endereco.logradouro;
+    document.querySelector("#bairro_resultado").innerHTML =
+        json.endereco.bairro;
+    document.querySelector("#localidade_resultado").innerHTML =
+        json.endereco.localidade;
+    document.querySelector("#estado_resultado").innerHTML = json.endereco.uf;
+    document.querySelector("#renda_resultado").innerHTML = json.renda;
 
     return false;
 }
