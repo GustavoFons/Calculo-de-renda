@@ -17,7 +17,7 @@ async function onsubmit(event) {
         body: JSON.stringify(values),
     });
     const json = await result.json();
-    console.log(json);
+    console.log(json); FFF
 
     document.querySelector("#nome_resultado").innerHTML = `Nome do titular: ${json.nome}`;
     document.querySelector("#cep_resultado").innerHTML = `CEP: ${json.endereco.cep}`;
