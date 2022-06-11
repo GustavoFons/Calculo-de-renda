@@ -5,28 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Desafio Kukac</title>
 </head>
 
 <body>
-    <h1>Sou eu</h1>
-    <form id="form">
-        <input type="text" id="nome" name="nome" placeholder="Nome">
-        <input required type="text" id="cep" name="cep" placeholder="CEP">
-        <input required type="Number" id="renda" name="renda" placeholder="Renda Mensal">
-        <input required type="Number" id="dependentes" name="dependentes" placeholder="Número de dependentes">
-        <button type="submit">Enviar</button>
-    </form>
-    <p id="nome_resultado"></p>
-    <p id="cep_resultado"></p>
-    <p id="logradouro_resultado"></p>
-    <p id="bairro_resultado"></p>
-    <p id="localidade_resultado"></p>
-    <p id="estado_resultado"></p>
-    <p id="renda_resultado"></p>
+    <header class="header">
+        <h1 class="h1">Renda per Capita</h1>
+        <form id="form" class="form">
+            <input class="inp" type="text" id="nome" name="nome" placeholder="Nome">
+            <input class="inp" required type="text" id="cep" name="cep" placeholder="CEP *">
+            <input class="inp" required type="Number" id="renda" name="renda" placeholder="Renda Mensal *">
+            <input class="inp" required type="Number" id="dependentes" name="dependentes"
+                placeholder="Número de dependentes *">
+            <button type="submit" class="botao">Calcular</button>
+        </form>
+        <div class="card">
+            <p id="nome_resultado"></p>
+            <p id="cep_resultado"></p>
+            <p id="logradouro_resultado"></p>
+            <p id="bairro_resultado"></p>
+            <p id="localidade_resultado"></p>
+            <p id="estado_resultado"></p>
+            <p id="renda_resultado"></p>
+        </div>
+    </header>
     <script src="script.js"></script>
 </body>
 
-</html>F
+</html>
