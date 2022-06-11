@@ -19,16 +19,16 @@ async function onsubmit(event) {
     const json = await result.json();
     console.log(json);
 
-    document.querySelector("#nome_resultado").innerHTML = json.nome;
-    document.querySelector("#cep_resultado").innerHTML = `json.endereco.cep`;
+    document.querySelector("#nome_resultado").innerHTML = `Nome do titular: ${json.nome}`;
+    document.querySelector("#cep_resultado").innerHTML = `CEP: ${json.endereco.cep}`;
     document.querySelector("#logradouro_resultado").innerHTML =
-        json.endereco.logradouro;
+        `Endereço: ${json.endereco.logradouro}`;
     document.querySelector("#bairro_resultado").innerHTML =
-        json.endereco.bairro;
+        `Bairro: ${json.endereco.bairro}`;
     document.querySelector("#localidade_resultado").innerHTML =
-        json.endereco.localidade;
-    document.querySelector("#estado_resultado").innerHTML = json.endereco.uf;
-    document.querySelector("#renda_resultado").innerHTML = json.renda;
+        `Cidade: ${json.endereco.localidade}`;
+    document.querySelector("#estado_resultado").innerHTML = `Estado: ${json.endereco.uf}`;
+    document.querySelector("#renda_resultado").innerHTML = `Renda per capita: ${json.renda} reais`;
 
     return false;
 }
