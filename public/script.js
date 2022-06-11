@@ -17,12 +17,12 @@ async function onsubmit(event) {
         body: JSON.stringify(values),
     });
     const json = await result.json();
-    console.log(json); FFF
+    console.log(json);
 
-    document.querySelector("#nome_resultado").innerHTML = `Nome do titular: ${json.nome}`;
+    document.querySelector("#nome_resultado").innerHTML = ` Nome do titular: ${json.nome} `;
     document.querySelector("#cep_resultado").innerHTML = `CEP: ${json.endereco.cep}`;
     document.querySelector("#logradouro_resultado").innerHTML =
-        `Endereço: ${json.endereco.logradouro}`;
+        ` Endereço: ${json.endereco.logradouro} `;
     document.querySelector("#bairro_resultado").innerHTML =
         `Bairro: ${json.endereco.bairro}`;
     document.querySelector("#localidade_resultado").innerHTML =
